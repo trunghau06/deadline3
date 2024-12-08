@@ -1,0 +1,649 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baumans&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    /* base color */
+    --light-color: #FFFFFF;
+    --dark-color: #242B33;
+    --darkBlue900-color: #002A48;
+    --darkBlue700-color: #003459;
+    --lightBlue700-color: #00A7E7;
+    --gray900-color: #242B33;
+    --gray600-color: #99A2A5;
+    --brownYellow400-color: #FCEED5;
+    --brownYellow600-color: #F7DBA7;
+
+    /* token color */
+    --primary-color: var(--brownYellow400-color);
+    --secondary-color: var(--brownYellow600-color);
+    --accent-color: var(--darkBlue900-color);
+
+    --title-color: var(--darkBlue900-color);
+    --supscript-color: var(--gray600-color);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--title-color);
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+   
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    position: relative; 
+}
+
+
+
+        /*KHUNG DAU*/
+.header-selection {
+    background: #F7DBA760;
+
+    width: 100%;
+    box-sizing: border-box; 
+    position: relative;
+}
+.header__background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: -60px;
+    left: 0px;
+    z-index: -1;
+}
+
+.header__background .one,
+.header__background .two,
+.header__background .three,
+.header__background .four {
+    width: 1100px;
+    aspect-ratio: 1/1;
+    background: var(--secondary-color);
+    border-radius: 100px;
+    left: -10px;
+    position: absolute;
+    z-index: -2;
+}
+
+.header__background .five,
+.header__background .six {
+    width: 1000px;
+    aspect-ratio: 1/1;
+    background: var(--darkBlue900-color);
+    border-radius: 100px;
+
+    position: absolute;
+    z-index: -1;
+}
+
+.header__background .one {
+    top: -1300px;
+    left: -600px;
+    z-index: -1;
+    rotate: 20deg;
+}
+
+
+.header__background .five {
+    width: 15px;
+    aspect-ratio: 1/1;
+    background: var(--darkBlue900-color);
+    border-radius: 30%;
+    rotate: -20deg;
+
+    top: 30px;
+    left: 250px
+}
+
+.header__background .two {
+    width: 15px;
+    aspect-ratio: 1/1;
+    background: var(--brownYellow600-color);
+    border-radius: 30%;
+    rotate: -10deg;
+
+    top: 30px;
+    left:250px
+}
+
+.header__background .three {
+    width: 20px;
+    aspect-ratio: 1/1;
+    background: var(--brownYellow600-color);
+    border-radius: 30%;
+    rotate: -20deg;
+
+    top: 30px;
+    left: 300px;
+}
+
+.header__background .four {
+    width: 300px; 
+    height: 400px;
+    background: var(--secondary-color);
+    border-radius: 30px;
+    position: absolute;
+    z-index: 1;
+    rotate: 20deg;
+    bottom: -140px; 
+    left: 130px;
+}
+
+.header__background .six {
+    width: 300px;
+    height: 200px;
+    background: var(--darkBlue900-color);
+    border-radius: 40px;
+    position: absolute;
+    z-index: -1;
+    rotate: -90deg;
+    bottom: -20px; 
+    left: 20px;
+}
+
+        /*THANH MENU*/
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 30px;
+    width: 100%;
+    flex-wrap: wrap; 
+}
+.logo {
+    margin-left: 0;
+    margin-right: 0;
+
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    max-width: 100%; 
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+.search-container1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+.search-container i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #555;
+    left: -10px;
+}
+.search-container1 i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #555;
+    right: -10px;
+}
+        /*NOI DUNNG*/
+.title {
+    text-align: left;
+    display: flex;
+    font-size: 36px;
+    font-family: 'Be Vietnam', sans-serif;
+    color :#002A48;
+    font-weight: 700;
+    margin-left: 20px;
+    
+}
+.small-title {
+    text-align: left;
+    display: flex;
+    font-size: 26px;
+    font-family: 'Be Vietnam', sans-serif;
+    color :#002A48;
+    font-weight: 700;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+.content {
+    text-align: left;
+    display: flex;
+    font-size: 12px;
+    font-family: 'Be Vietnam', sans-serif;
+    color :#002A48;
+    font-weight: 500;
+    margin-left: 12px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.button-container {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+        /*NUT GIOI THIEU*/
+.introduce-button {
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    border: 1px solid #003459;
+    border-radius: 40px;
+    margin-left: 10px;
+    height: 40px;
+    background-color: transparent;
+}
+.introduce-button i {
+    font-size: 16px;
+    margin-right: 10px;
+    margin-left: 10px;
+    
+}
+        /*NUT KHAM PHA NGAY */
+.discover-button {
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 40px;
+    background-color: #003459;
+    color: #fff;
+    height: 40px;
+}
+.image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/*TIEU ĐỀ KHUNG 2*/
+.title2_1 {
+    text-align: left;
+    display: flex;
+    font-size: 13px;
+    font-family: 'Be Vietnam', sans-serif;
+    color :#000000;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-top: 35px;
+}
+.title2_2 {
+    text-align: left;
+    display: flex;
+    font-size: 18px;
+    font-family: 'Be Vietnam', sans-serif;
+    color :#003459;
+    font-weight: 700;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+        /*KHUNG ẢNH GIỚI THIỆU CHÓ*/
+.list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.list__item {
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    flex-direction: column;
+    width: 175px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item__img {
+    width: 90%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    margin-top: 5px; 
+}
+
+.item__content {
+    padding: 10px;
+}
+
+.item__content__name h5 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+    margin: 5px 0;
+}
+
+.item__content__gender,
+.item__content__age,
+.item__content__price {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.item__content__price b {
+    font-size: 16px;
+    color: #000000;
+}
+/*NUT XEM THEM*/
+.button2.container {  
+    display: flex;
+    justify-content: center;   
+    align-items: center;     
+    gap: 10px;
+    flex-wrap: nowrap;
+    width: 100%;              
+}
+.more-button {
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #003459;
+    border-radius: 40px;
+    background-color: transparent;
+    height: 40px;
+    width: 370px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+/*Khung 2*/
+.second-selection {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+   
+}
+
+.title2, .small-title2, .content2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.title2 {
+    font-size: 36px;
+    font-family: 'Be Vietnam', sans-serif;
+    color: #002A48;
+    font-weight: 700;
+}
+
+.small-title2 {
+    font-size: 26px;
+    font-family: 'Be Vietnam', sans-serif;
+    color: #002A48;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.content2 {
+    font-size: 12px;
+    font-family: 'Be Vietnam', sans-serif;
+    color: #002A48;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding: 0 40px;
+}
+.second__background .shape1 {
+    width: 360px;
+    height: 400px;
+    border-radius: 30px 30px 0 0;
+    background: var(--brownYellow400-color);
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    z-index: -1;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+}
+
+.second__background .shape2 {
+    width: 360px;
+    height: 240px;
+    border-radius: 0 0 30px 30px;
+    background: var(--darkBlue900-color);
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    z-index: -1;
+    clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%);
+}
+.title3_1 {
+    text-align: left;
+    display: flex;
+    font-size: 13px;
+    font-family: 'Be Vietnam', sans-serif;
+    color :#000000;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.title3_2 {
+    text-align: left;
+    display: flex;
+    font-size: 18px;
+    font-family: 'Be Vietnam', sans-serif;
+    color :#003459;
+    font-weight: 700;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+/* GIOI THIEU CHO*/
+
+
+.list2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.list2__item {
+    width: 100%;
+    height: 500px;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 28px -2px #00000014;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.list2__item img {
+    width: 100%;
+    object-fit: fill;
+    border-radius: 20px;
+}
+
+.list2__item__content {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.list2__item__content__nemws,
+.list2__item__content__news h3 {
+    width: fit-content;
+    padding: 6px 12px;
+    background: var(--lightBlue700-color);
+    border-radius: 30px;
+
+    font-size: 24px;
+    color: var(--light-color);
+}
+
+.list2__item__content h5 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.list2__item__content p {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--dark-color);
+}
+.third-selection {
+    width: 100%;
+    padding: 20px;
+    margin-top: 100px;
+    background: var(--brownYellow400-color);
+    border-radius: 40px 40px 0 0;
+    margin-top: 10px;
+}
+
+.form {
+    padding: 36px;
+    background: var(--darkBlue700-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__title h2 {
+    font-weight: 400;
+    color: var(--light-color);
+    font-size: 20px;
+}
+
+.form__team {
+    padding: 20px;
+    background: var(--light-color);
+    border-radius: 20px;
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form__team__input {
+    padding: 10px 10px;
+    background: var(--light-color);
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.form__team__dangki {
+    width: 100%;
+    padding: 10px 10px;
+    background: var(--darkBlue700-color);
+    border-radius: 10px;
+    color: var(--light-color);
+}
+
+.form__team__dangki h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--light-color);
+}
+.third__menu {
+    width: 100%;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--dark-color);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+ul.third__menu__group,
+ul.third__menu__group2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+}
+
+li.third__menu__group__item h4 {
+    font-size: 16px;
+    color: var(--dark-color);
+}
+
+li.third__menu__group2__item {
+    margin: 0 10px; 
+}
+
+li.third__menu__group2__item i {
+    font-size: 24px; 
+    color: var(--dark-color); 
+}
+.third__end {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.third__end__logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.third__end__logo img {
+    width: 60%;
+}
+
+.third__end__content {
+    margin: 10px 0 10px;
+    display: flex;
+    gap: 48px;    
+}
+
+.third__end__link {
+    opacity: 0.8;
+    font-size: 16px;
+    font-weight: 200;
+    color: var(--supscript-color);
+    text-align: center;
+}
+
+
+
